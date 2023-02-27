@@ -1,6 +1,10 @@
 pipeline {
 
     agent {
+        docker {
+            image '22053404_webimage'
+        }
+        
         node {
             label 'master'
         }
@@ -31,8 +35,8 @@ pipeline {
         }
 
         stage('Stage 2_22053404') {
-            steps {
-                echo "S2"
+            steps {      
+                echo "S2_22053404 : Web Server Creation Completed"
             }
         }
 
